@@ -48,7 +48,7 @@ nav{position:sticky;bottom:0;background:#fff;border-top:1px solid #ddd;display:f
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
-const numbers=['03007804506','03012069139'], gallons=[1000,2000,3000,4000,6000];const prices={1000:4500,2000:8000,3000:11000,4000:15000,6000:22000};let selected=1000;
+const numbers=['03007804506','03012069139'], gallons=[1000,2000,3000,4000,6000];const prices={1000:5000,2000:9000,3000:12000,4000:16000,6000:23000};let selected=1000;
 const $=id=>document.getElementById(id), ordersKey='shahg_orders_v2';
 gallons.forEach((g,i)=>{let d=document.createElement('div');d.className='size '+(i===0?'active':'');d.textContent=g+' گیلن';d.onclick=()=>{selected=g;document.querySelectorAll('.size').forEach(x=>x.classList.remove('active'));d.classList.add('active');$('selectedPrice').innerHTML='<b>قیمت: '+(prices[g] ? prices[g]+' روپے' : 'رابطے پر معلوم کریں')+'</b>'};$('sizes').appendChild(d)});
 $('date').valueAsDate=new Date();
